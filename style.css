@@ -1,0 +1,396 @@
+* {
+	box-sizing: border-box;
+}
+
+body{
+	font-size: 16px;
+	font-family: Helvetica, sans-serif;
+}
+.container{
+	width: 600px;
+	margin: 0 auto;
+	clear: both;
+}
+
+.hidden{
+  display: none;
+}
+
+.aboutbox a{
+  text-decoration: none;
+  background: #009688;
+  color: #E0F2F1;
+  padding: 5px;
+  margin-top: -25px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  float: right;
+}
+
+#abe{
+  color: #004D40;
+}
+
+.aboutbox{
+  text-align: left;
+  background: #E0F2F1;
+  padding: 30px;
+  width: 400px;
+  margin: 0 auto;
+  background: #E0F2F1;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  z-index: 5;
+}
+
+.aboutbox p{
+  line-height: 1.5em;
+  margin-bottom: 25px;
+}
+
+.aboutbox h1{
+  margin-top: 16px;
+  color: #333;
+  font-size: 4em;
+  font-weight: bolder;
+}
+
+a{
+	text-decoration: none;
+	background: #E8EAF6;
+	padding: 5px;
+	margin-top: -5px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+	float: right;
+}
+
+.namelist{
+	width: 100%%;
+	color: #E8EAF6;
+}
+
+.leftbox{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	margin: 0;
+	width: 15em;
+	z-index: 0;
+	background: #009688;
+	color: #E0F2F1;
+}
+
+.rightbox{
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	right: 0;
+	top: 0;
+	left: 15em;
+	margin: 0;
+	height: 100%;
+	z-index: 2;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.vidbox{
+	flex: 1;
+	overflow: hidden;
+	/*position: absolute;*/
+	padding: 20px;
+
+}
+.listbox{
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+	overflow-y: auto;
+	overflow-x: hidden;
+	flex: 1;
+	background: #EEE;
+}
+
+.chatbox{
+	padding: 0.75em;
+	height: 4em;
+	border-top: 1px solid grey;
+	bottom: 0;
+}
+
+#msg{
+	margin: 0;
+	height: 2em;
+	width: 100%;
+	font-size: 1.2em;
+	border-radius: 5px;
+	background: white;
+	border: none;
+	padding: 0.2em;
+	border: 1px solid grey;
+
+}
+
+::-webkit-input-placeholder {
+ text-align: right;
+ padding-right: 0.5em;
+}
+:-moz-placeholder { /* older Firefox*/
+ text-align: right;
+ padding-right: 0.5em;
+}
+::-moz-placeholder { /* Firefox 19+ */
+ text-align: right;
+ padding-right: 0.5em;
+}
+:-ms-input-placeholder {
+ text-align: right;
+ padding-right: 0.5em;
+}
+
+
+
+.imply{
+	color: green;
+}
+
+#nameinput{
+	display: table;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #009688;
+	z-index: 4;
+}
+
+.special{
+  background: rgba(0, 150, 136, 0.75) !important;
+}
+
+.modal{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.modalbox{
+	padding: 30px;
+	width: 350px;
+	margin: 0 auto;
+	background: #E0F2F1;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.modalbox h1{
+	font-family: "Helvetica", sans-serif;
+	color: #333;
+	font-size: 4em;
+	font-weight: bolder;
+	margin-top: 0;
+}
+
+
+.mainbox{
+	clear: both;
+}
+
+#chatinput{
+	width: 100%;
+}
+
+#submitmsg{
+	width: 100px;
+	margin: 0;
+	height: 20px;
+	display: none;
+}
+
+#name{
+	width: 100px;
+}
+
+#roomselect{
+	text-align: center;
+	padding: 10px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #004D40;
+}
+
+#rmnm{
+	width: 80%;
+}
+
+#room{
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 10px;
+
+}
+
+.msgbody{
+	width: 100%;
+	padding: 0.5em;
+	margin: 0;
+	border-bottom: 1px dashed #F0F0F0;
+	border-top-right-radius: 5px;
+}
+
+.msgbody:nth-child(odd){
+	background: #FAFAFA;
+}
+
+.msgname{
+	margin-right: 10px;
+	margin-bottom: 0.5em;
+	font-family: Helvetica;
+	font-size: 1.2em;
+	font-weight: 600;
+}
+
+.truemsg{
+	color: #333;
+	word-wrap: break-word;
+}
+.time{
+	position: relative;
+	top: -10px;
+	float: right;
+	color: #AAA;
+	font-size: 0.7em;
+	font-style: italic;
+}
+
+.nameitem{
+	padding-left: 10px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	width: 100%;
+	border-bottom: 1px solid #004D40;
+}
+
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 1px rgba(0,0,0,0.5);
+
+
+}
+
+i{
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 1px solid #AAA;
+	color: #444;
+}
+
+
+.hide{
+	-webkit-animation: hide 0.3s forwards;
+	        animation: hide 0.3s forwards;
+}
+
+@-webkit-keyframes hide{
+	0%{
+		opacity: 1;
+		visibility: visible;
+		filter: alpha(opacity=100);
+	}
+	100%{
+		opacity: 0;
+		visibility: hidden;
+		filter: alpha(opacity=0);
+	}
+}
+@keyframes hide{
+	0%{
+		opacity: 1;
+		visibility: visible;
+		filter: alpha(opacity=100);
+	}
+	100%{
+		opacity: 0;
+		visibility: hidden;
+		filter: alpha(opacity=0);
+	}
+}
+
+#sound{
+	border-top: 1px dashed #004D40;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 64px;
+	padding: 20px;
+}
+
+
+.videoContainer {
+    position: relative;
+    width: 200px;
+    height: 150px;
+}
+.videoContainer video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	border: 1px solid #333;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+#videosme video{
+	width: 200px;
+	height: 150px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	border: 1px solid #333;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.volume {
+    position: absolute;
+    left: 15%;
+    width: 70%;
+    bottom: 2px;
+    height: 10px;
+}
+
+
+.muted{
+	display: none
+    position: absolute
+    z-index: 1
+    color: #12acef
+    left: 0px
+    bottom: 10%
+    width: 100%
+}
+
+.paused{
+	display: none
+    position: absolute
+    z-index: 1
+    color: #12acef
+    left: 0px
+    top: 40%
+    width: 100%
+}
+
+.controls{
+	width: 100%;
+	padding: 10px;
+	background: #EEE;
+	border-bottom: 1px solid #333;
+	box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+#remotes video{
+	height: 150px;
+	width: 200px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	border: 1px solid #333;
+	box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
